@@ -64,4 +64,13 @@ export default class DOMElement {
     }
     return elem;
   }
+
+  // custom methods
+  addElementsToDom(elements: HTMLElement[]) {
+    const elementAlreadyAppended = this.parent.querySelector(`.${this.styles}`) !== null;
+    if (!elementAlreadyAppended) this.parent.appendChild(this.element);
+    for (let i = 0; i < elements.length; i++) {
+      this.element.appendChild(elements[i]);
+    }
+  }
 }

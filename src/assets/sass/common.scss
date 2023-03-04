@@ -1,1 +1,67 @@
-@use './variables/commonVariables' as vars;
+@use './variables/commonVariables'as vars;
+
+$bdRad: 4px;
+
+#flights-search-summary-root,
+.header-wrapper {
+  background-color: vars.$clr-bg-btb;
+  border-bottom-left-radius: $bdRad;
+  border-bottom-right-radius: $bdRad;
+  overflow: hidden;
+
+  &.header-wrapper {
+    margin-bottom: 2rem;
+    border-radius: 12px;
+
+    .ecomio-wrapper {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .ecomio-wrapper {
+    border-top-width: 0px;
+    color: vars.$clr-text-default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 10%;
+    }
+
+    .location {
+      color: #f0dc50;
+      font-weight: bold;
+      padding: 0.5rem 0.8rem;
+      border-radius: $bdRad;
+      margin-right: 1rem;
+    }
+
+    .score {
+      background: vars.$clr-bg-rewardgood;
+      border-radius: $bdRad;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0.8rem 1rem 0.8rem 1rem;
+      padding: 0.2rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        &:nth-child(1) {
+          font-size: 14px;
+        }
+
+        &:nth-child(2) {
+          font-weight: bold;
+        }
+      }
+
+      &.danger {
+        background-color: #e74c3c;
+      }
+    }
+  }
+}
