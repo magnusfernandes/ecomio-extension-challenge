@@ -1,6 +1,6 @@
 import { Trip, TripResponse } from '../models';
 
-const BASE_URL = 'http://localhost:8000/api/v1';
+const BASE_URL = 'http://localhost:3400/api/v1';
 
 export const fetchSustainabilityScore = async (trips: Trip[]) => {
   let payload = {
